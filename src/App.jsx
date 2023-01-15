@@ -7,6 +7,7 @@ import Contacts from "./Pages/Contacts";
 import Projects from "./Pages/Projects";
 import Resume from "./Pages/Resume";
 import Skills from "./Pages/skills/Skills";
+import Github from "./Pages/Github";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <About />
       <Projects />
       <Skills />
+      <Github/>
       <Contacts />
       <Resume />
     </div>

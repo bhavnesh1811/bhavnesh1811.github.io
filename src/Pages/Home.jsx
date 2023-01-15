@@ -1,10 +1,10 @@
 import React from "react";
-import { Heading, Text } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
 
 const Home = () => {
   return (
-    <div id="home">
+    <Box id="home" margin={"20px auto"}>
       <Heading>Hi 👋 I'm Bhavnesh Arora</Heading>
 
       <Typewriter
@@ -25,7 +25,7 @@ const Home = () => {
         as well as non-technical skills and a dedication towards creating useful
         and interactive web applications.
       </Text>
-    </div>
+    </Box>
   );
 };
 

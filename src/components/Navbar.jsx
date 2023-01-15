@@ -18,7 +18,6 @@ const menus = [
   { id: 2, name: "Skills", location: "skills" },
   { id: 3, name: "Projects", location: "projects" },
   { id: 4, name: "Contacts", location: "contacts" },
-  { id: 5, name: "Resume", location: "resume" },
 ];
 
 export default function Navbar() {
@@ -52,6 +51,8 @@ export default function Navbar() {
             <Text key={item.id}>{item.name}</Text>
           </Link>
         ))}
+
+        <Button><Link to="resume">Resume</Link></Button>
 
         <Box bg={useColorModeValue("gray.700", "black")}>
           <Flex alignItems={"center"} justifyContent={"space-between"}>

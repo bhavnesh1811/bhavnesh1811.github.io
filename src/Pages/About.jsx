@@ -24,7 +24,7 @@ const socialMediaLinks = [
 
 const About = () => {
   return (
-    <div id="about" style={{border:"2px solid green"}}>
+    <Box id="about" margin={"20px auto"} style={{border:"2px solid green"}}>
       <Heading>About</Heading>
       <Flex
         flexDirection={{ base: "column", sm:"column",md: "row" }}
@@ -59,7 +59,7 @@ const About = () => {
           </Flex>
         </Flex>
       </Flex>
-    </div>
+    </Box>
   );
 };
 
