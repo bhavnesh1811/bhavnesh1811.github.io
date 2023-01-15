@@ -1,7 +1,8 @@
 import React from "react";
 import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 // import image from "../image/Bhavnesh_1.jpg";
-import { Flex, Image, Box, Text,Divider  } from "@chakra-ui/react";
+import { Flex, Image, Box, Text,Divider, Heading  } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const socialMediaLinks = [
   {
@@ -23,8 +24,8 @@ const socialMediaLinks = [
 
 const About = () => {
   return (
-    <>
-      
+    <div id="about" style={{border:"2px solid green"}}>
+      <Heading>About</Heading>
       <Flex
         flexDirection={{ base: "column", sm:"column",md: "row" }}
         marginTop={{ base: "30px", sm:"40px",md: "60px" }}
@@ -45,20 +46,20 @@ const About = () => {
               Algorithmic problems with a good hold on Data Structures.
           </Text>
 
-          <Divider marginTop="20px"/>
+          <Divider marginTop="20px" size={"100px"} fontWeight="bold" />
           <Flex flexDirection={"row"} >
 
           {socialMediaLinks.map((item) => (
             <Flex padding="10px" key={item.id}>
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <Link to={item.link} >
                 <Box>{item.icon}</Box>
-              </a>
+              </Link>
             </Flex>
           ))}
           </Flex>
         </Flex>
       </Flex>
-    </>
+    </div>
   );
 };
 

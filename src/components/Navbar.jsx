@@ -10,15 +10,15 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const menus = [
-  { id: 0, name: "Home", location: "/" },
-  { id: 1, name: "About", location: "/about" },
-  { id: 2, name: "Skills", location: "/skills" },
-  { id: 3, name: "Projects", location: "/projects" },
-  { id: 4, name: "Contacts", location: "/contacts" },
-  { id: 5, name: "Resume", location: "/resume" },
+  { id: 0, name: "Home", location: "home" },
+  { id: 1, name: "About", location: "about" },
+  { id: 2, name: "Skills", location: "skills" },
+  { id: 3, name: "Projects", location: "projects" },
+  { id: 4, name: "Contacts", location: "contacts" },
+  { id: 5, name: "Resume", location: "resume" },
 ];
 
 export default function Navbar() {
@@ -27,13 +27,13 @@ export default function Navbar() {
   return (
     <>
       <Flex
-        paddingInline={{ base: "20px", sm:"10px",md: "0px"}}
-        justifyContent={{sm:"space-around",md: "space-around" }}
-        flexDirection={{ base: "column", sm:"row",md: "row" }}
-        alignItems={{ base: "center", sm:"center" }}
-        fontSize={{ base: "16", sm:"16",md: "24"}}
+        paddingInline={{ base: "20px", sm: "10px", md: "0px" }}
+        justifyContent={{ sm: "space-around", md: "space-around" }}
+        flexDirection={{ base: "column", sm: "row", md: "row" }}
+        alignItems={{ base: "center", sm: "center" }}
+        fontSize={{ base: "16", sm: "16", md: "24" }}
         padding={"15px"}
-        bg={colorMode === "dark" ? "black" : "lightBlue"}
+        bg={colorMode === "dark" ? "black" : "gray.400"}
       >
         <Text onClick={() => scroll.scrollToTop()}>
           <span className="grey-color"> &lt;</span>
@@ -42,15 +42,19 @@ export default function Navbar() {
         </Text>
 
         {menus.map((item) => (
-          <Link key={item.id} to={item.location}>
-            <Text key={item.id}>
-              {item.name}
-            </Text>
+          <Link
+            key={item.id}
+            to={item.location}
+            // activeclass="active"
+            smooth={true}
+            duration={500}
+          >
+            <Text key={item.id}>{item.name}</Text>
           </Link>
         ))}
 
-        <Box bg={useColorModeValue("blue.300", "black")}>
-          <Flex alignItems={"center"} justifyContent={"space-between"} >
+        <Box bg={useColorModeValue("gray.700", "black")}>
+          <Flex alignItems={"center"} justifyContent={"space-between"}>
             <Stack direction={"row"} spacing={2}>
               <Button color="gray.700" onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
