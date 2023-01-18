@@ -1,11 +1,20 @@
 import React from "react";
 
-import { Box, Flex, Heading, Text, Image, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Image,
+  Button,
+  Grid,
+} from "@chakra-ui/react";
 import { FaHtml5, FaReact, FaJs, FaCss3 } from "react-icons/fa";
 import { v4 as uuidv4 } from "uuid";
 import betterBuy from "../assets/Better_Buy.png";
 import nykaa from "../assets/Nykaa.png";
 import streamSpot from "../assets/StreamSpot.png";
+import asos from "../assets/AsosClone.png";
 
 const projects = [
   {
@@ -38,41 +47,59 @@ const projects = [
     repo_link: "https://github.com/mak-1997/groovy-airplane-6414",
     tech_stack: [<FaHtml5 />, <FaCss3 />, <FaJs />],
   },
+  {
+    id: 4,
+    project_name: "ASOS Clone",
+    image: asos,
+    project_desc:
+      "This is a clone of asos.com which is an ecommerce which consits of basic signin,signup and two more static pages.",
+    deploy_link: "https://superlative-centaur-9f9647.netlify.app/",
+    repo_link: "https://github.com/bhavnesh1811/macabre-carriage-2497",
+    tech_stack: [<FaHtml5 />, <FaCss3 />, <FaJs />],
+  },
 ];
 
 const Projects = () => {
   return (
-    <div id="projects">
+    <Box id="projects">
       <Box>
-        <Heading>Projects</Heading>
+        <Heading style={{color:"yellowgreen",textAlign:"center"}}>Projects</Heading>
       </Box>
 
-      <Flex
-        gap={10}
-        style={{ border: "2px solid red", justifyContent: "space-around" }}
+      <Grid
+        gap={6}
+        style={{ border: "2px solid red" }}
+        gridTemplateColumns={{
+          base: "repeat(1,1fr)",
+          sm: "repeat(2,1fr)",
+          md: "repeat(2,1fr)",
+        }}
+        width={{base: "20px", sm: "20px", md: "100%"}}
+        
       >
         {projects.map((item) => (
-          <Box key={item.id}>
-           
-            <Image src={item.image} alt="icon" height={{ base: "20px", sm: "20px", md: "48%" }}/>
-      
-              <Box
-                marginTop={{ base: "10px", sm: "10px", md: "10px" }}
-                justifyContent="space-evenly"
-                marginBottom={{ base: "10px", sm: "10px", md: "10px" }}
-                height={{ base: "10px", sm: "200px", md: "48%" }}
-                border="1px solid green"
-              >
-                <Heading as={"h5"} size="md" textAlign={"center"}>{item.project_name}</Heading>
-                <Text >{item.project_desc}</Text>
-              
+          <Box key={item.id} height={{base: "20px", sm: "20px", md: "40%"}}>
+            <Image
+              src={item.image}
+              alt="icon"
+            />
+
+            <Box
+              marginTop={{ base: "10px", sm: "10px", md: "10px" }}
+              justifyContent="space-evenly"
+              marginBottom={{ base: "10px", sm: "10px", md: "10px" }}
+              border="1px solid green"
+            >
+              <Heading as={"h5"} size="md" textAlign={"center"}>
+                {item.project_name}
+              </Heading>
+              <Text>{item.project_desc}</Text>
 
               <Flex
                 gap={4}
                 marginTop={{ base: "10px", sm: "10px", md: "10px" }}
                 justifyContent="space-evenly"
                 marginBottom={{ base: "10px", sm: "10px", md: "10px" }}
-                
               >
                 {item.tech_stack.map((item) => (
                   <Box key={uuidv4()} className="iconsTechStack">
@@ -97,12 +124,11 @@ const Projects = () => {
                   </a>
                 </Button>
               </Flex>
-              </Box>
             </Box>
-          
+          </Box>
         ))}
-      </Flex>
-    </div>
+      </Grid>
+    </Box>
   );
 };
 

@@ -17,14 +17,14 @@ const menus = [
   { id: 1, name: "About", location: "about" },
   { id: 2, name: "Skills", location: "skills" },
   { id: 3, name: "Projects", location: "projects" },
-  { id: 4, name: "Contacts", location: "contacts" },
+  { id: 4, name: "Contact", location: "contacts" },
 ];
 
 export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <>
+    <Box style={{ position: "relative" }}>
       <Flex
         paddingInline={{ base: "20px", sm: "10px", md: "0px" }}
         justifyContent={{ sm: "space-around", md: "space-around" }}
@@ -52,7 +52,11 @@ export default function Navbar() {
           </Link>
         ))}
 
-        <Button><Link to="resume">Resume</Link></Button>
+        <Button colorScheme="teal">
+          <a href="../resume/Bhavnesh_Arora_Resume.pdf" download>
+            Resume
+          </a>
+        </Button>
 
         <Box bg={useColorModeValue("gray.700", "black")}>
           <Flex alignItems={"center"} justifyContent={"space-between"}>
@@ -64,6 +68,6 @@ export default function Navbar() {
           </Flex>
         </Box>
       </Flex>
-    </>
+    </Box>
   );
 }

@@ -33,7 +33,7 @@ export const BoxDiv = styled.div`
 
 export const SkillBox = styled.div`
     padding: 40px;
-    background: ${(props) => props.theme.cardColor};
+    background: gray;
     color: ${(props) => props.theme.fontColorSecondary};
     box-shadow: 0px 12px 24px rgb(2 30 84 / 10%);
     margin: 20px;

@@ -19,6 +19,7 @@ import {
     Common,
 } from './Styles';
 import { Container, H1 } from '../../SharedStyles/SharedStyles';
+import { Heading } from '@chakra-ui/react';
 
 import('./skills.css');
 
@@ -77,7 +78,7 @@ const Skills = () => {
         <Container className='skills' id="skills">
             <SkillsContainer>
                 <Common>
-                    <H1>Technologies</H1>
+                    <Heading style={{color:"yellowgreen",textAlign:"center"}} >Skills</Heading>
                 </Common>
                 <Col className='colorTechnologies'>
                     {projects.map((item) => (
