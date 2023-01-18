@@ -61,24 +61,24 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Box id="projects">
+    <Box id="projects" margin={"40px auto"}>
       <Box>
-        <Heading style={{color:"yellowgreen",textAlign:"center"}}>Projects</Heading>
+        <Heading style={{color:"yellowgreen",textAlign:"center",margin:"40px auto"}}>Projects</Heading>
       </Box>
 
       <Grid
         gap={6}
-        style={{ border: "2px solid red" }}
         gridTemplateColumns={{
           base: "repeat(1,1fr)",
           sm: "repeat(2,1fr)",
           md: "repeat(2,1fr)",
         }}
-        width={{base: "20px", sm: "20px", md: "100%"}}
+        // width={{base: "80%", sm: "50%", md: "100%"}}
+        
         
       >
         {projects.map((item) => (
-          <Box key={item.id} height={{base: "20px", sm: "20px", md: "40%"}}>
+          <Box alignContent={"center"} key={item.id}>
             <Image
               src={item.image}
               alt="icon"
@@ -88,7 +88,7 @@ const Projects = () => {
               marginTop={{ base: "10px", sm: "10px", md: "10px" }}
               justifyContent="space-evenly"
               marginBottom={{ base: "10px", sm: "10px", md: "10px" }}
-              border="1px solid green"
+              // border="1px solid green"
             >
               <Heading as={"h5"} size="md" textAlign={"center"}>
                 {item.project_name}

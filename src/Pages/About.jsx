@@ -34,8 +34,8 @@ const About = () => {
   return (
     <Box
       id="about"
-      margin={"10px auto"}
-      style={{ border: "2px solid green", textAlign: "center" }}
+      margin={"40px auto"}
+      style={{ textAlign: "center" }}
     >
       <Heading style={{ color: "yellowgreen" }}>About</Heading>
       <Flex
@@ -82,6 +82,7 @@ const About = () => {
           </Flex>
         </Flex>
       </Flex>
+      
     </Box>
   );
 };

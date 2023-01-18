@@ -1,17 +1,18 @@
 import React from "react";
 import { Box, Button, Heading, Text } from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
-import "../index.css"
-
+import styles from "../index.css";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate=useNavigate();
   return (
-    <Box id="home" margin={"20px auto"} textAlign="center">
-      <Heading style={{ color: "yellowgreen", textAlign: "center" }}>
+    <Box id="home" textAlign="center">
+      <Heading style={{ color: "yellowgreen", textAlign: "center" ,margin:"80px auto 20px auto"}}>
         Hi 👋 I'm Bhavnesh Arora
       </Heading>
 
-      <Typewriter className="type"
+      <Typewriter 
         options={{
           strings: [
             "A Full Stack Web Developer",
@@ -21,6 +22,7 @@ const Home = () => {
           pauseFor: 1500,
           autoStart: true,
           loop: true,
+          style: styles.typeWriterText,
         }}
       />
 
@@ -30,12 +32,12 @@ const Home = () => {
         as well as non-technical skills and a dedication towards creating useful
         and interactive web applications.
       </Text>
-      <Button colorScheme="teal" >
+
+      <a href="../resume/Bhavnesh_Arora_Resume.pdf" download>
+        <Button colorScheme="teal" onClick={()=>{return navigate("https://drive.google.com/file/d/1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA/view?usp=share_link")}}>Resume</Button>
+      </a>
+
       
-        <a href="../resume/Bhavnesh_Arora_Resume.pdf" download>
-          Resume
-        </a>
-      </Button>
     </Box>
   );
 };

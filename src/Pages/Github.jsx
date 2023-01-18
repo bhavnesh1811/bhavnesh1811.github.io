@@ -5,7 +5,7 @@ import GitHubCalendar from "react-github-calendar";
 const Github = () => {
   return (
     <Box id="github" >
-      <Grid margin={"auto"} justifyContent="center" boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px" padding={"20px"} gridTemplateColumns={{base:"repeat(1,2fr)",sm:"repeat(2,1fr)"}} width={{base:"90%",sm:"80%"}} borderRadius={"20px"} gap="20px">
+      <Grid margin={"40px auto"} justifyContent="center" boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px" padding={"20px"} gridTemplateColumns={{base:"repeat(1,2fr)",sm:"repeat(2,1fr)"}} width={{base:"90%",sm:"80%"}} borderRadius={"20px"} gap="20px">
         <Box>
           <Heading style={{color:"yellowgreen",textAlign:"center"}}>Languages</Heading>
           <Image

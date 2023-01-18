@@ -6,7 +6,7 @@ import About from "./Pages/About";
 import Contacts from "./Pages/Contacts";
 import Projects from "./Pages/Projects";
 import Resume from "./Pages/Resume";
-import Skills from "./Pages/skills/Skills";
+import Skills from "./Pages/Skills";
 import Github from "./Pages/Github";
 
 const App = () => {
