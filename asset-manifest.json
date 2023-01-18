@@ -1,23 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.abd64e84.css",
-    "main.js": "/static/js/main.d8a63828.js",
-    "static/css/575.696d4c7a.chunk.css": "/static/css/575.696d4c7a.chunk.css",
-    "static/js/575.bcdbc1a2.chunk.js": "/static/js/575.bcdbc1a2.chunk.js",
+    "main.css": "/static/css/main.691302a1.css",
+    "main.js": "/static/js/main.9827411e.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/Nykaa.png": "/static/media/Nykaa.2c92156c1f0f518aa629.png",
     "static/media/StreamSpot.png": "/static/media/StreamSpot.fcfc6c8b80245b71a7c2.png",
     "static/media/Better_Buy.png": "/static/media/Better_Buy.3b85980eb72abb27df4e.png",
     "static/media/AsosClone.png": "/static/media/AsosClone.5cad8ddb6597902654c4.png",
+    "static/media/javascript.png": "/static/media/javascript.cae65a84867e9d6ad7bf.png",
+    "static/media/react.jpg": "/static/media/react.bb1dafdf570c640254cc.jpg",
     "index.html": "/index.html",
-    "main.abd64e84.css.map": "/static/css/main.abd64e84.css.map",
-    "main.d8a63828.js.map": "/static/js/main.d8a63828.js.map",
-    "575.696d4c7a.chunk.css.map": "/static/css/575.696d4c7a.chunk.css.map",
-    "575.bcdbc1a2.chunk.js.map": "/static/js/575.bcdbc1a2.chunk.js.map",
+    "main.691302a1.css.map": "/static/css/main.691302a1.css.map",
+    "main.9827411e.js.map": "/static/js/main.9827411e.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.abd64e84.css",
-    "static/js/main.d8a63828.js"
+    "static/css/main.691302a1.css",
+    "static/js/main.9827411e.js"
   ]
 }
