@@ -29,10 +29,9 @@ export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <>
+    <Box className={styles.pos}>
       <Box bg={useColorModeValue("gray.100", "gray.900")}>
         <Flex
-          className={styles.pos}
           paddingInline={{ base: "20px", sm: "10px", md: "0px" }}
           justifyContent={{
             base: "space-between",
@@ -48,7 +47,7 @@ export default function Navbar() {
             size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
-            display={{base:"flex",sm:"flex", md: "none" }}
+            display={{ base: "flex", sm: "flex", md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
           <Text>
@@ -71,11 +70,18 @@ export default function Navbar() {
                 </Link>
               ))}
 
-              <Button colorScheme="teal">
-                <a href="../resume/Bhavnesh_Arora_Resume.pdf" download>
+              <a href="../resume/Bhavnesh_Arora_Resume.pdf" download>
+                <Button
+                  colorScheme="teal"
+                  onClick={() =>
+                    window.open(
+                      "https://drive.google.com/file/d/1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA/view?usp=share_link"
+                    )
+                  }
+                >
                   Resume
-                </a>
-              </Button>
+                </Button>
+              </a>
 
               <Box bg={useColorModeValue("gray.700", "black")}>
                 <Flex alignItems={"center"} justifyContent={"space-between"}>
@@ -107,11 +113,18 @@ export default function Navbar() {
                 </Link>
               ))}
 
-              <Button colorScheme="teal">
-                <a href="../resume/Bhavnesh_Arora_Resume.pdf" download>
+              <a href="../resume/Bhavnesh_Arora_Resume.pdf" download>
+                <Button
+                  colorScheme="teal"
+                  onClick={() =>
+                    window.open(
+                      "https://drive.google.com/file/d/1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA/view?usp=share_link"
+                    )
+                  }
+                >
                   Resume
-                </a>
-              </Button>
+                </Button>
+              </a>
 
               <Button color="gray.700" onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
@@ -120,6 +133,6 @@ export default function Navbar() {
           </Box>
         ) : null}
       </Box>
-    </>
+    </Box>
   );
 }
