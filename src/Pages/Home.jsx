@@ -2,16 +2,17 @@ import React from "react";
 import { Box, Heading } from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
 import styles from "../index.css";
+import { CENTER, YELLOWGREEN } from "../constants/typography";
 // import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   return (
-    <Box id="home" textAlign="center" >
-      <Box mt={"200px"}>
+    <Box id="home" textAlign={CENTER} pt={"30px"} >
+      <Box >
         <Heading
           style={{
-            color: "yellowgreen",
-            textAlign: "center",
+            color: YELLOWGREEN,
+            textAlign: CENTER,
             margin: "80px auto 20px auto",
           }}
         >

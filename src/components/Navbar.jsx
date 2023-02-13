@@ -15,6 +15,19 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import {
+  AUTO,
+  BLACK,
+  CENTER,
+  FILL_50PARENT,
+  FONTSIZE,
+  JUSTIFYCONTENT,
+  LIGHTSTEELBLUE,
+  ROW,
+  SE,
+  TEAL,
+  YELLOWGREEN,
+} from "../constants/typography";
 
 const menus = [
   { id: 0, name: "Home", location: "home" },
@@ -30,18 +43,14 @@ export default function Navbar() {
 
   return (
     <Box className={styles.pos}>
-      <Box bg={useColorModeValue("gray.100", "gray.900")}>
+      <Box bg={useColorModeValue("gray.100", "gray.700")}>
         <Flex
           paddingInline={{ base: "20px", sm: "10px", md: "0px" }}
-          justifyContent={{
-            base: "space-between",
-            sm: "space-around",
-            md: "space-around",
-          }}
-          alignItems="center"
-          fontSize={{ base: "16", sm: "16", md: "24" }}
+          justifyContent={JUSTIFYCONTENT}
+          alignItems={CENTER}
+          fontSize={FONTSIZE}
           padding="15px"
-          bg={colorMode === "dark" ? "black" : "gray.400"}
+          bg={colorMode === "dark" ? BLACK : "gray.100"}
         >
           <IconButton
             size={"md"}
@@ -50,13 +59,20 @@ export default function Navbar() {
             display={{ base: "flex", sm: "flex", md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <Text>
+          <Text
+            fontSize={FONTSIZE}
+            color={colorMode === "dark" ? YELLOWGREEN : YELLOWGREEN}
+          >
             <span className="grey-color"> &lt;</span>
             <span className="logo-name">Bhavnesh Arora</span>
             <span className="grey-color">/&gt;</span>
           </Text>
-          <HStack spacing={8}>
-            <HStack as={"nav"} display={{ base: "none", md: "flex" }}>
+          <HStack>
+            <HStack
+              as={"nav"}
+              display={{ base: "none", md: "flex" }}
+              spacing={"2px"}
+            >
               {menus.map((item) => (
                 <Link
                   key={item.id}
@@ -70,9 +86,10 @@ export default function Navbar() {
                 </Link>
               ))}
 
-              <a href="../resume/Bhavnesh_Arora_Resume.pdf" download>
+              <a href="https://drive.google.com/uc?export=download&id=1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA">
                 <Button
-                  colorScheme="teal"
+                  marginLeft={"5px"}
+                  colorScheme={TEAL}
                   onClick={() =>
                     window.open(
                       "https://drive.google.com/file/d/1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA/view?usp=share_link"
@@ -83,10 +100,14 @@ export default function Navbar() {
                 </Button>
               </a>
 
-              <Box bg={useColorModeValue("gray.700", "black")}>
-                <Flex alignItems={"center"} justifyContent={"space-between"}>
-                  <Stack direction={"row"} spacing={2}>
-                    <Button color="gray.700" onClick={toggleColorMode}>
+              <Box bg={useColorModeValue(LIGHTSTEELBLUE, BLACK)}>
+                <Flex alignItems={CENTER} justifyContent={SE}>
+                  <Stack direction={ROW}>
+                    <Button
+                      color="gray.700"
+                      onClick={toggleColorMode}
+                      marginLeft={"5px"}
+                    >
                       {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                     </Button>
                   </Stack>
@@ -97,7 +118,7 @@ export default function Navbar() {
         </Flex>
 
         {isOpen ? (
-          <Box display={{ md: "none" }}>
+          <Box display={{ md: "none" }} top={0}>
             <Stack as={"nav"} spacing={4}>
               {menus.map((item) => (
                 <Link
@@ -106,27 +127,47 @@ export default function Navbar() {
                   activeclass="active"
                   smooth="true"
                   duration={500}
+                  // m="auto"
                 >
-                  <Button variant={"ghost"} key={item.id}>
+                  <Text
+                    onClick={onClose}
+                    variant={"ghost"}
+                    key={item.id}
+                    textAlign={CENTER}
+                  >
                     {item.name}
-                  </Button>
+                  </Text>
                 </Link>
               ))}
 
-              <a href="../resume/Bhavnesh_Arora_Resume.pdf" download>
+              <a
+                style={{ textAlign: "center" }}
+                href="https://drive.google.com/uc?export=download&id=1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA"
+              >
                 <Button
-                  colorScheme="teal"
-                  onClick={() =>
+                  m={AUTO}
+                  colorScheme={TEAL}
+                  onClick={() => {
                     window.open(
                       "https://drive.google.com/file/d/1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA/view?usp=share_link"
-                    )
-                  }
+                    );
+                    onClose();
+                  }}
                 >
                   Resume
                 </Button>
               </a>
 
-              <Button color="gray.700" onClick={toggleColorMode}>
+              <Button
+                textAlign={CENTER}
+                color="gray.700"
+                onClick={() => {
+                  toggleColorMode();
+                  onClose();
+                }}
+                w={FILL_50PARENT}
+                m={"auto 25px"}
+              >
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>
             </Stack>

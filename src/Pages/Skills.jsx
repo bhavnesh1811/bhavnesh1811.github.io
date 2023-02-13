@@ -55,7 +55,7 @@ const Skills = () => {
   ];
 
   return (
-    <Grid id="skills">
+    <Grid id="skills" pt={"70px"}>
       <Heading
         style={{ color: "yellowgreen", textAlign: "center", margin: "20px" }}
       >

@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar";
 import About from "./Pages/About";
 import Contacts from "./Pages/Contacts";
 import Projects from "./Pages/Projects";
-import Resume from "./Pages/Resume";
 import Skills from "./Pages/Skills";
 import Github from "./Pages/Github";
 
@@ -18,8 +17,7 @@ const App = () => {
       <About />
       <Projects />
       <Skills />
-      <Github/>
-      <Resume />
+      <Github />
       <Contacts />
     </div>
   );

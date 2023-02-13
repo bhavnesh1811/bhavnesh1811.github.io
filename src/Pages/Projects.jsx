@@ -15,6 +15,7 @@ import betterBuy from "../assets/Better_Buy.png";
 import nykaa from "../assets/Nykaa.png";
 import streamSpot from "../assets/StreamSpot.png";
 import asos from "../assets/AsosClone.png";
+import { CENTER, R1, R2, SE, YELLOWGREEN } from "../constants/typography";
 
 const projects = [
   {
@@ -61,24 +62,24 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Box id="projects" margin={"40px auto"}>
+    <Box id="projects" pt={"70px"}>
       <Box>
-        <Heading style={{color:"yellowgreen",textAlign:"center",margin:"40px auto"}}>Projects</Heading>
+        <Heading style={{color:YELLOWGREEN,textAlign:CENTER,margin:"40px auto"}}>Projects</Heading>
       </Box>
 
       <Grid
         gap={6}
         gridTemplateColumns={{
-          base: "repeat(1,1fr)",
-          sm: "repeat(2,1fr)",
-          md: "repeat(2,1fr)",
+          base: R1,
+          sm: R2,
+          md: R2,
         }}
         // width={{base: "80%", sm: "50%", md: "100%"}}
         
         
       >
         {projects.map((item) => (
-          <Box alignContent={"center"} key={item.id}>
+          <Box alignContent={CENTER} key={item.id}>
             <Image
               src={item.image}
               alt="icon"
@@ -86,11 +87,12 @@ const Projects = () => {
 
             <Box
               marginTop={{ base: "10px", sm: "10px", md: "10px" }}
-              justifyContent="space-evenly"
+              justifyContent={SE}
               marginBottom={{ base: "10px", sm: "10px", md: "10px" }}
               // border="1px solid green"
+              
             >
-              <Heading as={"h5"} size="md" textAlign={"center"}>
+              <Heading as={"h5"} size="md" textAlign={CENTER}>
                 {item.project_name}
               </Heading>
               <Text>{item.project_desc}</Text>
