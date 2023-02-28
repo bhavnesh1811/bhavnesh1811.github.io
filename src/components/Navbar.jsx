@@ -19,12 +19,10 @@ import {
   AUTO,
   BLACK,
   CENTER,
-  FILL_50PARENT,
   FONTSIZE,
   JUSTIFYCONTENT,
   LIGHTSTEELBLUE,
   ROW,
-  SE,
   TEAL,
   YELLOWGREEN,
 } from "../constants/typography";
@@ -86,9 +84,12 @@ export default function Navbar() {
                 </Link>
               ))}
 
-              <a href="https://drive.google.com/uc?export=download&id=1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA">
+              <a
+                href="https://drive.google.com/uc?export=download&id=1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA"
+                download="fw20_1169-Bhavnesh-Arora-Resume"
+              >
                 <Button
-                  marginLeft={"5px"}
+                  // marginLeft={"5px"}
                   colorScheme={TEAL}
                   onClick={() =>
                     window.open(
@@ -101,17 +102,15 @@ export default function Navbar() {
               </a>
 
               <Box bg={useColorModeValue(LIGHTSTEELBLUE, BLACK)}>
-                <Flex alignItems={CENTER} justifyContent={SE}>
-                  <Stack direction={ROW}>
-                    <Button
-                      color="gray.700"
-                      onClick={toggleColorMode}
-                      marginLeft={"5px"}
-                    >
-                      {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-                    </Button>
-                  </Stack>
-                </Flex>
+                <Stack direction={ROW}>
+                  <Button
+                    color="gray.700"
+                    onClick={toggleColorMode}
+                    // marginLeft={"5px"}
+                  >
+                    {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+                  </Button>
+                </Stack>
               </Box>
             </HStack>
           </HStack>
@@ -143,6 +142,7 @@ export default function Navbar() {
               <a
                 style={{ textAlign: "center" }}
                 href="https://drive.google.com/uc?export=download&id=1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA"
+                download={true}
               >
                 <Button
                   m={AUTO}
@@ -165,8 +165,6 @@ export default function Navbar() {
                   toggleColorMode();
                   onClose();
                 }}
-                w={FILL_50PARENT}
-                m={"auto 25px"}
               >
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>

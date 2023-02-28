@@ -12,7 +12,6 @@ import {
 import {
   CENTER,
   COLUMN,
-  FILL_25PARENT,
   FILL_50PARENT,
   FILL_65PARENT,
   FONTSIZE,
@@ -34,13 +33,13 @@ const About = () => {
         <Flex
           margin={{
             base: "auto 30%",
-            sm: "auto 20%",
+            sm: "auto 35%",
             md: "auto 2%",
           }}
-          minWidth={{ md: FILL_25PARENT }}
+          // minWidth={{ md: FILL_25PARENT }}
         >
           <Image
-            // minWidth={"100%"}
+            // w={{base:"100%",sm:"40%",md:"100%"}}
             src="https://avatars.githubusercontent.com/u/110032728?v=4"
             borderRadius={FILL_50PARENT}
             alt="my image"
@@ -74,6 +73,7 @@ const About = () => {
                 )
               }
             >
+              
               Resume
             </Button>
           </a>

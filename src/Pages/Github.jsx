@@ -1,40 +1,42 @@
-import { Box, Grid, Heading, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image } from "@chakra-ui/react";
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
-import { CENTER, FILL_80PARENT, FILL_90PARENT, YELLOWGREEN } from "../constants/typography";
+import { CENTER, COLUMN, FILL_80PARENT, FILL_90PARENT, ROW, YELLOWGREEN } from "../constants/typography";
 
 const Github = () => {
   return (
     <Box id="github">
-      <Grid
+      <Flex
         margin={"40px auto"}
         justifyContent={CENTER}
         boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
         padding={"20px"}
-        gridTemplateColumns={{ base: "repeat(1,2fr)", sm: "repeat(2,1fr)" }}
+        direction={{ base: COLUMN, sm: COLUMN,md: ROW,lg:ROW }}
         width={{ base: FILL_90PARENT, sm: FILL_80PARENT }}
         borderRadius={"20px"}
         gap="20px"
       >
         <Box>
-          <Heading style={{  color: YELLOWGREEN, textAlign: CENTER}}>
-            Languages
+          <Heading style={{  color: YELLOWGREEN, textAlign: CENTER}} mb={"20px"}>
+            Streak
           </Heading>
           <Image
-            src="https://github-readme-stats.vercel.app/api/top-langs?username=bhavnesh1811&show_icons=true&locale=en&layout=compact"
+            src="https://github-readme-streak-stats.herokuapp.com/?user=bhavnesh1811&theme=radical"
             alt="bhavnesh1811"
+            height={"200px"}
           />
         </Box>
         <Box>
-          <Heading style={{ color: YELLOWGREEN, textAlign: CENTER }}>
+          <Heading mb={"20px"} style={{ color: YELLOWGREEN, textAlign: CENTER }}>
             GitHub Stats
           </Heading>
           <Image
             src="https://github-readme-stats.vercel.app/api?username=bhavnesh1811&hide=prs&count_private=true&show_icons=true&theme=radical"
             alt="bhavnesh1811"
+            height={"200px"}
           />
         </Box>
-      </Grid>
+      </Flex>
       <Box
         margin={"20px auto"}
         justifyContent={CENTER}
