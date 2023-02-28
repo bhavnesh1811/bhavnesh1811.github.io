@@ -8,6 +8,7 @@ import {
   Divider,
   Heading,
   Button,
+  useColorMode,
 } from "@chakra-ui/react";
 import {
   CENTER,
@@ -15,6 +16,7 @@ import {
   FILL_50PARENT,
   FILL_65PARENT,
   FONTSIZE,
+  LIGHTSTEELBLUE,
   ROW,
   SE,
   TEAL,
@@ -22,9 +24,12 @@ import {
 } from "../constants/typography";
 
 const About = () => {
+  const { colorMode } = useColorMode();
   return (
     <Box id="about" textAlign={CENTER} pt={"100px"}>
-      <Heading color={YELLOWGREEN}>About</Heading>
+      <Heading color={colorMode === "dark" ? YELLOWGREEN : LIGHTSTEELBLUE}>
+        About
+      </Heading>
       <Flex
         flexDirection={{ base: COLUMN, sm: COLUMN, md: ROW }}
         marginTop={{ base: "30px", sm: "40px", md: "30px" }}
@@ -36,10 +41,8 @@ const About = () => {
             sm: "auto 35%",
             md: "auto 2%",
           }}
-          // minWidth={{ md: FILL_25PARENT }}
         >
           <Image
-            // w={{base:"100%",sm:"40%",md:"100%"}}
             src="https://avatars.githubusercontent.com/u/110032728?v=4"
             borderRadius={FILL_50PARENT}
             alt="my image"
@@ -64,8 +67,12 @@ const About = () => {
           </Text>
 
           <Divider margin="20px auto" />
-          <a href="https://drive.google.com/uc?export=download&id=1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA">
+          <a
+            href="https://drive.google.com/uc?export=download&id=1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA"
+            download="fw20_1169-Bhavnesh-Arora-Resume"
+          >
             <Button
+              // marginLeft={"5px"}
               colorScheme={TEAL}
               onClick={() =>
                 window.open(
@@ -73,7 +80,6 @@ const About = () => {
                 )
               }
             >
-              
               Resume
             </Button>
           </a>

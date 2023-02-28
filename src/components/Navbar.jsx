@@ -16,7 +16,6 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import {
-  AUTO,
   BLACK,
   CENTER,
   FONTSIZE,
@@ -59,7 +58,7 @@ export default function Navbar() {
           />
           <Text
             fontSize={FONTSIZE}
-            color={colorMode === "dark" ? YELLOWGREEN : YELLOWGREEN}
+            color={colorMode==="dark"?YELLOWGREEN:LIGHTSTEELBLUE}
           >
             <span className="grey-color"> &lt;</span>
             <span className="logo-name">Bhavnesh Arora</span>
@@ -140,19 +139,18 @@ export default function Navbar() {
               ))}
 
               <a
-                style={{ textAlign: "center" }}
                 href="https://drive.google.com/uc?export=download&id=1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA"
-                download={true}
+                download="fw20_1169-Bhavnesh-Arora-Resume"
+                style={{margin:"auto"}}
               >
                 <Button
-                  m={AUTO}
+                  
                   colorScheme={TEAL}
-                  onClick={() => {
+                  onClick={() =>
                     window.open(
                       "https://drive.google.com/file/d/1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA/view?usp=share_link"
-                    );
-                    onClose();
-                  }}
+                    )
+                  }
                 >
                   Resume
                 </Button>

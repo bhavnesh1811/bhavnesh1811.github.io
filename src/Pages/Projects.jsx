@@ -8,111 +8,184 @@ import {
   Image,
   Button,
   Grid,
+  useColorMode,
 } from "@chakra-ui/react";
 import { FaHtml5, FaReact, FaJs, FaCss3 } from "react-icons/fa";
+import { SiChakraui, SiExpress, SiRedux } from "react-icons/si";
 import { v4 as uuidv4 } from "uuid";
-import betterBuy from "../assets/Better_Buy.png";
-import nykaa from "../assets/Nykaa.png";
-import streamSpot from "../assets/StreamSpot.png";
-import asos from "../assets/AsosClone.png";
-import { CENTER, R1, R2, SE, YELLOWGREEN } from "../constants/typography";
+import {
+  AUTO,
+  CENTER,
+  COLUMN,
+  FILL_80PARENT,
+  LIGHTSTEELBLUE,
+  R1,
+  R2,
+  SE,
+  YELLOWGREEN,
+} from "../constants/typography";
 
-const projects = [
+const project = [
   {
     id: 1,
+    project_name: "Advance Spare Care",
+    image:
+      "https://user-images.githubusercontent.com/108116297/221490829-713675c9-ce32-428b-b11d-2cbf7b95a8af.png",
+    project_desc:
+      "Advance Spare Care is an scalable makeup auto parts website platform where the user can come and place their order. It is an Collaborative project of 5 members. It has a admin panel where admin can do a lot of options.",
+    deploy_link: "https://advance-auto-parts.vercel.app/",
+    repo_link: "https://github.com/SORDE12/Advance-Spare-Care",
+    tech_stack: [
+      { name: "React", icon: <FaReact /> },
+      { name: "Redux", icon: <SiRedux /> },
+      { name: "Express", icon: <SiExpress /> },
+      { name: "Chakra", icon: <SiChakraui /> },
+    ],
+  },
+  {
+    id: 2,
+    project_name: "Tata CliQ",
+    image:
+      "https://camo.githubusercontent.com/e3daf89457e019865f84f065e1ef2c1c495aea4499113ba5bdbb0814fc45a0f5/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d317630426f2d3171327a4c564c4738704555484a654b4f69717450733036795f32",
+    project_desc:
+      "Begin your journey online with one of the fastest growing, e-commerce brands in the country and have a seamless online shopping experience. Immerse yourself in the joy of browsing through the best Indian and international brands in fashion, luxury, electronics and jewellery.",
+    deploy_link: "https://tatacliq-ruby.vercel.app/",
+    repo_link: "https://github.com/dev-Imsaurabh/TATA-CLiQ-clone",
+    tech_stack: [
+      { name: "React", icon: <FaReact /> },
+      { name: "Redux", icon: <SiRedux /> },
+      { name: "JavaScript", icon: <FaJs /> },
+      { name: "Chakra", icon: <SiChakraui /> },
+    ],
+  },
+  {
+    id: 3,
     project_name: "StreamSpot",
-    image: streamSpot,
+    image:
+      "https://user-images.githubusercontent.com/110032728/221775546-8e275423-2c68-490c-b134-821623439733.png",
     project_desc:
       "StreamSpot is an online video streaming website which allows users to stream movie trailers after their successful login and also allows users to know about any movie details using its search functionality.",
     deploy_link: "https://streamspot.netlify.app/",
     repo_link: "https://github.com/bhavnesh1811/hushed-hair-9563",
-    tech_stack: [<FaHtml5 />, <FaCss3 />, <FaJs />, <FaReact />],
-  },
-  {
-    id: 2,
-    project_name: "Better Buy",
-    image: betterBuy,
-    project_desc:
-      "Better Buy website is a clone of ecommerce website  which allows user to purchase different kind of products as per their requirement and needs.",
-    deploy_link: "https://lucent-custard-80745a.netlify.app/",
-    repo_link: "https://github.com/bhavnesh1811/damaged-regret-6465",
-    tech_stack: [<FaHtml5 />, <FaCss3 />, <FaJs />],
-  },
-  {
-    id: 3,
-    project_name: "Nykaa Clone",
-    image: nykaa,
-    project_desc:
-      "This is a clone of nykaa.com which is an ecommerce website where users can buy different categories of products.",
-    deploy_link: "https://sensational-torrone-ff2b20.netlify.app/",
-    repo_link: "https://github.com/mak-1997/groovy-airplane-6414",
-    tech_stack: [<FaHtml5 />, <FaCss3 />, <FaJs />],
+    tech_stack: [
+      { name: "JavaScript", icon: <FaJs /> },
+      { name: "React", icon: <FaReact /> },
+      { name: "Chakra", icon: <SiChakraui /> },
+    ],
   },
   {
     id: 4,
-    project_name: "ASOS Clone",
-    image: asos,
+    project_name: "Nykaa Clone",
+    image:
+      "https://user-images.githubusercontent.com/110032728/221774602-c312c8de-a642-4c62-86d4-430e3fe88dec.png",
     project_desc:
-      "This is a clone of asos.com which is an ecommerce which consits of basic signin,signup and two more static pages.",
-    deploy_link: "https://superlative-centaur-9f9647.netlify.app/",
-    repo_link: "https://github.com/bhavnesh1811/macabre-carriage-2497",
-    tech_stack: [<FaHtml5 />, <FaCss3 />, <FaJs />],
+      "Nykaa.com is an ecommerce website inspired from original nykaa.com where users can shop different category of items. In this website, any user can login, signup, add products, filter products and purchase them by applying coupons.",
+    deploy_link: "https://sensational-torrone-ff2b20.netlify.app/",
+    repo_link: "https://github.com/bhavnesh1811/groovy-airplane-6414",
+    tech_stack: [
+      { name: "HTML", icon: <FaHtml5 /> },
+      { name: "CSS", icon: <FaCss3 /> },
+      { name: "JavaScript", icon: <FaJs /> },
+    ],
   },
+  // {
+  //   id: 5,
+  //   project_name: "Better Buy",
+  //   image: "https://user-images.githubusercontent.com/110032728/221776894-3cddaacf-cc04-44a6-b0d2-736dbc1f2499.png",
+  //   project_desc:
+  //     "Better Buy website is an ecommerce website inspired from jiomart.com which allows user to purchase different categories of products as per their requirement and needs.",
+  //   deploy_link: "https://lucent-custard-80745a.netlify.app/",
+  //   repo_link: "https://github.com/bhavnesh1811/damaged-regret-6465",
+  //   tech_stack_name:["HTML","CSS","JavaScript"],
+  //   tech_stack: [<FaHtml5 />, <FaCss3 />, <FaJs />],
+  // }
 ];
 
 const Projects = () => {
+  const { colorMode } = useColorMode();
+  
   return (
     <Box id="projects" pt={"70px"}>
       <Box>
-        <Heading style={{color:YELLOWGREEN,textAlign:CENTER,margin:"40px auto"}}>Projects</Heading>
+        <Heading color={colorMode==="dark"?YELLOWGREEN:LIGHTSTEELBLUE} textAlign={CENTER} margin="40px auto">
+          Projects
+        </Heading>
       </Box>
 
       <Grid
-        gap={6}
+        gap={"20px"}
         gridTemplateColumns={{
           base: R1,
-          sm: R2,
-          md: R2,
+          sm: R1,
+          md: R1,
+          lg: R2,
         }}
-        // width={{base: "80%", sm: "50%", md: "100%"}}
-        
-        
+        // w={{base:FILL_10PARENT,sm:FILL_60PARENT,md:FILL_70PARENT,lg:FILL_80PARENT}}
+        m={AUTO}
       >
-        {projects.map((item) => (
-          <Box alignContent={CENTER} key={item.id}>
-            <Image
-              src={item.image}
-              alt="icon"
-            />
+        {project.map((item) => (
+          <Flex
+          direction={COLUMN}
+            key={item.id}
+            boxShadow={"rgba(0, 0, 0, 0.35) 0px 5px 15px"}
+            p={{ base: "10px", sm: "10px", lg: "20px" }}
+            borderRadius={"20px"}
+            justifyContent={CENTER}
+            w={FILL_80PARENT}
+            m={AUTO}
+          >
+            <Image src={item.image} alt={item.project_desc} h={{base:"150px",sm:"200px",md:"250px",lg:"300px"}} />
 
             <Box
-              marginTop={{ base: "10px", sm: "10px", md: "10px" }}
+              m={{
+                base: "10px auto",
+                sm: "10px auto",
+                md: "10px auto",
+              }}
               justifyContent={SE}
-              marginBottom={{ base: "10px", sm: "10px", md: "10px" }}
               // border="1px solid green"
-              
             >
-              <Heading as={"h5"} size="md" textAlign={CENTER}>
+              <Heading as={"h5"} size="md" color={colorMode==="dark"?YELLOWGREEN:LIGHTSTEELBLUE} textAlign={CENTER} mb={"10px"}>
                 {item.project_name}
               </Heading>
               <Text>{item.project_desc}</Text>
 
               <Flex
                 gap={4}
-                marginTop={{ base: "10px", sm: "10px", md: "10px" }}
-                justifyContent="space-evenly"
-                marginBottom={{ base: "10px", sm: "10px", md: "10px" }}
+                justifyContent={SE}
               >
                 {item.tech_stack.map((item) => (
-                  <Box key={uuidv4()} className="iconsTechStack">
+                  <Flex direction={COLUMN} m={AUTO}>
+                  <Box
+                    color={colorMode==="dark"?YELLOWGREEN:LIGHTSTEELBLUE}
+                    key={uuidv4()}
+                    className="iconsTechStack"
+                  >
+                    {item.name}
+                  </Box>
+                  <Flex
+                    color={colorMode==="dark"?YELLOWGREEN:LIGHTSTEELBLUE}
+                    key={uuidv4()}
+                    className="iconsTechStack"
+                    justifyContent={CENTER}
+                  >
+                    {item.icon}
+                  </Flex>
+                  </Flex>
+                ))}
+              </Flex>
+              {/* <Flex color={colorMode==="dark"?YELLOWGREEN:LIGHTSTEELBLUE} justifyContent={SE}>
+                TechStack:-
+                {item.tech_stack_name.map((item) => (
+                  <Box key={uuidv4()} className="iconsTechStackName">
                     {item}
                   </Box>
                 ))}
-              </Flex>
+              </Flex> */}
               <Flex
-                marginTop={{ base: "10px", sm: "10px", md: "10px" }}
-                justifyContent="space-evenly"
-                marginBottom={{ base: "10px", sm: "10px", md: "10px" }}
+                marginTop={"20px"}
+                justifyContent={SE}
+                marginBottom={"20px"}
               >
                 <Button>
                   <a href={item.repo_link} target="_blank" rel="noreferrer">
@@ -127,7 +200,7 @@ const Projects = () => {
                 </Button>
               </Flex>
             </Box>
-          </Box>
+          </Flex>
         ))}
       </Grid>
     </Box>
