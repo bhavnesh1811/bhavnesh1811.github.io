@@ -31,10 +31,24 @@ import {
   WHITESMOKE,
   YELLOWGREEN,
 } from "../constants/typography";
+import emailjs from '@emailjs/browser';
+import { useRef } from "react";
 
 const Contact = () => {
   const { colorMode } = useColorMode();
+  const form = useRef();
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_bif4535', 'template_hgai2a9', form.current, 'b1ElgQ56GqZGkFUyT')
+      .then((result) => {
+        alert("Your Email has been sent,Thank You.")
+          console.log(result);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
     <Box id="contacts" textAlign={CENTER} pt={"90px"}>
       <Box>
@@ -50,12 +64,12 @@ const Contact = () => {
           marginTop={30}
           marginBottom={"10px"}
           fontSize={FONTSIZE}
-          color={YELLOWGREEN}
+          color={colorMode === "dark" ? YELLOWGREEN : LIGHTSTEELBLUE}
           justify={CENTER}
         ></Flex>
-        <form
-          action="https://getform.io/f/2f8ac422-cbe2-4166-95e4-dcc033d67710"
-          method="POST"
+        <form ref={form}
+          onSubmit={sendEmail}
+          
         >
           <Box
             m={AUTO}
@@ -77,12 +91,13 @@ const Contact = () => {
                       children={<BsPerson color="gray.800" />}
                     />
                     <Input
-                      name="Name"
+                      name="user_name"
                       type="text"
                       size="md"
                       color={
                         colorMode === "dark" ? YELLOWGREEN : LIGHTSTEELBLUE
                       }
+                      required
                     />
                   </InputGroup>
                 </FormControl>
@@ -94,25 +109,27 @@ const Contact = () => {
                       children={<MdOutlineEmail color="gray.800" />}
                     />
                     <Input
-                      name="Mail"
+                      name="user_email"
                       type="email"
                       size="md"
                       color={
                         colorMode === "dark" ? YELLOWGREEN : LIGHTSTEELBLUE
                       }
+                      required
                     />
                   </InputGroup>
                 </FormControl>
                 <FormControl id="name">
                   <FormLabel fontSize={FONTSIZE}>Message</FormLabel>
                   <Textarea
-                    name="Message"
+                    name="message"
                     borderColor="blue.500"
                     _hover={{
                       borderRadius: "gray.300",
                     }}
                     placeholder="Write here"
-                    color={"white"}
+                    color={colorMode === "dark" ? YELLOWGREEN : LIGHTSTEELBLUE}
+                    required
                   />
                 </FormControl>
                 <FormControl id="name" float="right">
