@@ -1,16 +1,15 @@
 import React from "react";
 
-import { Flex, Grid, Heading, Image, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, Grid, Heading, Image, useColorMode } from "@chakra-ui/react";
 import {
   AUTO,
   CENTER,
   COLUMN,
   FILL_80PARENT,
   LIGHTSTEELBLUE,
-  R1,
   R2,
   R3,
-  R4,
+  R6,
   SA,
   SMALL,
   YELLOWGREEN,
@@ -150,6 +149,7 @@ const Skills = () => {
       <Heading
       color={colorMode==="dark"?YELLOWGREEN:LIGHTSTEELBLUE}
         textAlign={CENTER}
+        mb={"30px"}
       >
         Skills
       </Heading>
@@ -157,41 +157,44 @@ const Skills = () => {
 
       <Grid
         gridTemplateColumns={{
-          base: R1,
-          sm: R2,
+          base: R2,
+          sm: R3,
           md: R3,
-          lg: R4,
+          lg: R6,
+        }}
+        w={{
+          base: FILL_80PARENT,
+          sm: FILL_80PARENT,
+          md: FILL_80PARENT,
         }}
         gap="20px"
-        mt={"20px"}
+        m={AUTO}
+        
       >
         {frontendtechs.map((item) => (
-          <Grid
+          <Box
+          
             key={item.id}
             boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
-            padding={"20px"}
-            width={{
-              base: FILL_80PARENT,
-              sm: FILL_80PARENT,
-              md: FILL_80PARENT,
-            }}
+            // padding={"20px"}
+            
             borderRadius={"20px"}
-            margin={AUTO}
-            alignItems={CENTER}
+            // alignItems={CENTER}
           >
             <Flex justifyContent={SA} direction={COLUMN} align={CENTER}>
               <Image w={"50%"}
+              padding={"10px"}
                  height={{
-                   base: "100px",
-                   sm: "100px",
-                   md: "100px",
-                   lg: "100px",
+                   base: "60px",
+                   sm: "80px",
+                   md: "80px",
+                   lg: "80px",
                  }} src={item.frontendtech_desc} />
-              <Heading as={"h4"} size={SMALL} color={colorMode==="dark"?YELLOWGREEN:LIGHTSTEELBLUE} textAlign={CENTER} marginTop={"20px"}>
+              <Heading as={"h4"} size={SMALL} color={colorMode==="dark"?YELLOWGREEN:LIGHTSTEELBLUE} textAlign={CENTER} marginBottom={"5px"}>
                 {item.frontendtech_name}
               </Heading>
             </Flex>
-          </Grid>
+          </Box>
         ))}
       </Grid>
       <Heading
@@ -200,47 +203,46 @@ const Skills = () => {
       >
         Tools
       </Heading>
-
       <Grid
         gridTemplateColumns={{
-          base: R1,
-          sm: R2,
+          base: R2,
+          sm: R3,
           md: R3,
-          lg: R4,
+          lg: R6,
+        }}
+        w={{
+          base: FILL_80PARENT,
+          sm: FILL_80PARENT,
+          md: FILL_80PARENT,
         }}
         gap="20px"
-        mt={"20px"}
+        m={AUTO}
+        
       >
         {tools.map((item) => (
-          <Grid
+          <Box
+          
             key={item.id}
             boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
-            padding={"20px"}
-            width={{
-              base: FILL_80PARENT,
-              sm: FILL_80PARENT,
-              md: FILL_80PARENT,
-            }}
+            // padding={"20px"}
+            
             borderRadius={"20px"}
-            margin={AUTO}
-            alignItems={CENTER}
+            // alignItems={CENTER}
           >
             <Flex justifyContent={SA} direction={COLUMN} align={CENTER}>
-              <Image
-                  w={"50%"}
+              <Image w={"50%"}
+              padding={"10px"}
                  height={{
-                   base: "100px",
-                   sm: "100px",
-                   md: "100px",
-                   lg: "100px",
-                 }}
-                src={item.tool_desc}
-              />
-              <Heading as={"h4"} size={SMALL} color={colorMode==="dark"?YELLOWGREEN:LIGHTSTEELBLUE} textAlign={CENTER} marginTop={"20px"}>
+                   base: "60px",
+                   sm: "80px",
+                   md: "80px",
+                   lg: "80px",
+                 }} src={item.tool_desc} />
+              <Heading as={"h4"} size={SMALL} color={colorMode==="dark"?YELLOWGREEN:LIGHTSTEELBLUE} textAlign={CENTER} marginBottom={"5px"}>
                 {item.tool_name}
               </Heading>
             </Flex>
-          </Grid>
+          </Box>
         ))}
       </Grid>
     </Grid>

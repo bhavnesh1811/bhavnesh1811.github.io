@@ -17,7 +17,7 @@ import {
   AUTO,
   CENTER,
   COLUMN,
-  FILL_80PARENT,
+  FILL_90PARENT,
   LIGHTSTEELBLUE,
   R1,
   R2,
@@ -103,11 +103,15 @@ const project = [
 
 const Projects = () => {
   const { colorMode } = useColorMode();
-  
+
   return (
     <Box id="projects" pt={"70px"}>
       <Box>
-        <Heading color={colorMode==="dark"?YELLOWGREEN:LIGHTSTEELBLUE} textAlign={CENTER} margin="40px auto">
+        <Heading
+          color={colorMode === "dark" ? YELLOWGREEN : LIGHTSTEELBLUE}
+          textAlign={CENTER}
+          margin="40px auto"
+        >
           Projects
         </Heading>
       </Box>
@@ -120,57 +124,71 @@ const Projects = () => {
           md: R1,
           lg: R2,
         }}
+        w={FILL_90PARENT}
         // w={{base:FILL_10PARENT,sm:FILL_60PARENT,md:FILL_70PARENT,lg:FILL_80PARENT}}
         m={AUTO}
       >
         {project.map((item) => (
           <Flex
-          direction={COLUMN}
+            direction={COLUMN}
             key={item.id}
             boxShadow={"rgba(0, 0, 0, 0.35) 0px 5px 15px"}
-            p={{ base: "10px", sm: "10px", lg: "20px" }}
+            p={{ base: "10px", sm: "10px", lg: "15px" }}
             borderRadius={"20px"}
             justifyContent={CENTER}
-            w={FILL_80PARENT}
-            m={AUTO}
+            // 
+             m={AUTO}
+            // gap={"20px"}
           >
-            <Image src={item.image} alt={item.project_desc} h={{base:"150px",sm:"200px",md:"250px",lg:"300px"}} />
+            <Image
+              src={item.image}
+              alt={item.project_desc}
+              h={{ base: "150px", sm: "200px", md: "250px", lg: "200px" }}
+            />
 
             <Box
               m={{
-                base: "10px auto",
-                sm: "10px auto",
-                md: "10px auto",
+                base: "5px auto",
+                sm: "5px auto",
+                md: "5px auto",
               }}
               justifyContent={SE}
+              h={{ base: "330px", sm: "250px", md: "225px", lg: "250px" }}
               // border="1px solid green"
             >
-              <Heading as={"h5"} size="md" color={colorMode==="dark"?YELLOWGREEN:LIGHTSTEELBLUE} textAlign={CENTER} mb={"10px"}>
+              <Heading
+                as={"h5"}
+                size="md"
+                color={colorMode === "dark" ? YELLOWGREEN : LIGHTSTEELBLUE}
+                textAlign={CENTER}
+                mb={"5px"}
+              >
                 {item.project_name}
               </Heading>
               <Text>{item.project_desc}</Text>
 
-              <Flex
-                gap={4}
-                justifyContent={SE}
-              >
+              <Flex gap={4} justifyContent={SE}>
                 {item.tech_stack.map((item) => (
                   <Flex direction={COLUMN} m={AUTO}>
-                  <Box
-                    color={colorMode==="dark"?YELLOWGREEN:LIGHTSTEELBLUE}
-                    key={uuidv4()}
-                    className="iconsTechStack"
-                  >
-                    {item.name}
-                  </Box>
-                  <Flex
-                    color={colorMode==="dark"?YELLOWGREEN:LIGHTSTEELBLUE}
-                    key={uuidv4()}
-                    className="iconsTechStack"
-                    justifyContent={CENTER}
-                  >
-                    {item.icon}
-                  </Flex>
+                    <Box
+                      color={
+                        colorMode === "dark" ? YELLOWGREEN : LIGHTSTEELBLUE
+                      }
+                      key={uuidv4()}
+                      className="iconsTechStack"
+                    >
+                      {item.name}
+                    </Box>
+                    <Flex
+                      color={
+                        colorMode === "dark" ? YELLOWGREEN : LIGHTSTEELBLUE
+                      }
+                      key={uuidv4()}
+                      className="iconsTechStack"
+                      justifyContent={CENTER}
+                    >
+                      {item.icon}
+                    </Flex>
                   </Flex>
                 ))}
               </Flex>
