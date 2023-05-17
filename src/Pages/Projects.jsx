@@ -49,7 +49,7 @@ const project = [
       "https://camo.githubusercontent.com/e3daf89457e019865f84f065e1ef2c1c495aea4499113ba5bdbb0814fc45a0f5/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d317630426f2d3171327a4c564c4738704555484a654b4f69717450733036795f32",
     project_desc:
       "Begin your journey online with one of the fastest growing, e-commerce brands in the country and have a seamless online shopping experience. Immerse yourself in the joy of browsing through the best Indian and international brands in fashion, luxury, electronics and jewellery.",
-    deploy_link: "https://tatacliq-ruby.vercel.app/",
+    deploy_link: "https://tatacliq-two.vercel.app/",
     repo_link: "https://github.com/dev-Imsaurabh/TATA-CLiQ-clone",
     tech_stack: [
       { name: "React", icon: <FaReact /> },
