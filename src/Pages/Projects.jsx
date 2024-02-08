@@ -48,7 +48,7 @@ const project = [
     image:
       "https://user-images.githubusercontent.com/108116297/221490829-713675c9-ce32-428b-b11d-2cbf7b95a8af.png",
     project_desc:
-      "Advance Spare Care is an scalable makeup auto parts website platform where the user can come and place their order. It is an Collaborative project of 5 members.",
+      "Advance Spare Care is an scalable makeup auto parts website platform where the user can come and place their order. It is an Collaborative project of five members.",
     deploy_link: "https://advance-auto-parts.vercel.app/",
     repo_link: "https://github.com/SORDE12/Advance-Spare-Care",
     tech_stack: [
