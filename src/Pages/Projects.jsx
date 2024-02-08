@@ -10,7 +10,7 @@ import {
   Grid,
   useColorMode,
 } from "@chakra-ui/react";
-import { FaHtml5, FaReact, FaJs, FaCss3 } from "react-icons/fa";
+import { FaReact, FaJs } from "react-icons/fa";
 import { SiChakraui, SiExpress, SiRedux, SiTypescript } from "react-icons/si";
 import { v4 as uuidv4 } from "uuid";
 import {

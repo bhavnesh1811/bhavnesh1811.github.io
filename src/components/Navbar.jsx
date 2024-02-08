@@ -21,7 +21,6 @@ import {
   FONTSIZE,
   JUSTIFYCONTENT,
   LIGHTSTEELBLUE,
-  ROW,
   TEAL,
   YELLOWGREEN,
 } from "../constants/typography";
