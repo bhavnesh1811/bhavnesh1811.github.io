@@ -58,60 +58,57 @@ export default function Navbar() {
           />
           <Text
             fontSize={FONTSIZE}
-            color={colorMode==="dark"?YELLOWGREEN:LIGHTSTEELBLUE}
+            color={colorMode === "dark" ? YELLOWGREEN : LIGHTSTEELBLUE}
           >
             <span className="grey-color"> &lt;</span>
             <span className="logo-name">Bhavnesh Arora</span>
             <span className="grey-color">/&gt;</span>
           </Text>
-          <HStack>
-            <HStack
-              as={"nav"}
-              display={{ base: "none", md: "flex" }}
-              spacing={"2px"}
-            >
-              {menus.map((item) => (
-                <Link
-                  key={item.id}
-                  to={item.location}
-                  smooth={true}
-                  duration={500}
-                >
-                  <Button variant={"ghost"} key={item.id}>
-                    {item.name}
-                  </Button>
-                </Link>
-              ))}
 
-              <a
-                href="https://drive.google.com/uc?export=download&id=1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA"
-                download="fw20_1169-Bhavnesh-Arora-Resume"
+          <HStack
+            as={"nav"}
+            display={{ base: "none", md: "flex" }}
+            spacing={"2px"}
+          >
+            {menus.map((item) => (
+              <Link
+                key={item.id}
+                to={item.location}
+                smooth={true}
+                duration={500}
               >
-                <Button
-                  // marginLeft={"5px"}
-                  colorScheme={TEAL}
-                  onClick={() =>
-                    window.open(
-                      "https://drive.google.com/file/d/1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA/view?usp=share_link"
-                    )
-                  }
-                >
-                  Resume
+                <Button variant={"ghost"} key={item.id}>
+                  {item.name}
                 </Button>
-              </a>
+              </Link>
+            ))}
 
-              <Box bg={useColorModeValue(LIGHTSTEELBLUE, BLACK)}>
-                <Stack direction={ROW}>
-                  <Button
-                    color="gray.700"
-                    onClick={toggleColorMode}
-                    // marginLeft={"5px"}
-                  >
-                    {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-                  </Button>
-                </Stack>
-              </Box>
-            </HStack>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA"
+              download="fw20_1169-Bhavnesh-Arora-Resume"
+            >
+              <Button
+                // marginLeft={"5px"}
+                colorScheme={TEAL}
+                onClick={() =>
+                  window.open(
+                    "https://drive.google.com/file/d/1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA/view?usp=share_link"
+                  )
+                }
+              >
+                Resume
+              </Button>
+            </a>
+
+            <Flex justifyContent="flex-end">
+              <Button onClick={toggleColorMode} marginLeft={{md:"16px"}}>
+                {colorMode === "light" ? (
+                  <MoonIcon color={LIGHTSTEELBLUE} />
+                ) : (
+                  <SunIcon color={YELLOWGREEN} />
+                )}
+              </Button>
+            </Flex>
           </HStack>
         </Flex>
 
@@ -141,10 +138,9 @@ export default function Navbar() {
               <a
                 href="https://drive.google.com/uc?export=download&id=1jrCXbIuKlIi1qd9D55mHVCsoFZ16QXrA"
                 download="fw20_1169-Bhavnesh-Arora-Resume"
-                style={{margin:"auto"}}
+                style={{ margin: "auto" }}
               >
                 <Button
-                  
                   colorScheme={TEAL}
                   onClick={() =>
                     window.open(
@@ -157,14 +153,16 @@ export default function Navbar() {
               </a>
 
               <Button
-                textAlign={CENTER}
-                color="gray.700"
                 onClick={() => {
                   toggleColorMode();
                   onClose();
                 }}
               >
-                {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+                {colorMode === "light" ? (
+                  <MoonIcon color={LIGHTSTEELBLUE} />
+                ) : (
+                  <SunIcon color={YELLOWGREEN} />
+                )}
               </Button>
             </Stack>
           </Box>

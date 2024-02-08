@@ -11,7 +11,7 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { FaHtml5, FaReact, FaJs, FaCss3 } from "react-icons/fa";
-import { SiChakraui, SiExpress, SiRedux } from "react-icons/si";
+import { SiChakraui, SiExpress, SiRedux, SiTypescript } from "react-icons/si";
 import { v4 as uuidv4 } from "uuid";
 import {
   AUTO,
@@ -28,11 +28,27 @@ import {
 const project = [
   {
     id: 1,
+    project_name: "Masai Alumni Website",
+    image:
+      "https://github-production-user-asset-6210df.s3.amazonaws.com/110032728/303467603-6751368a-6b44-4dba-bf1d-9f158f95904d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240208%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240208T200409Z&X-Amz-Expires=300&X-Amz-Signature=a38294d473be1e1de5e808bdc5fef46c98fde64b0d7fb35322b7934533fb5859&X-Amz-SignedHeaders=host&actor_id=110032728&key_id=0&repo_id=754691430",
+    project_desc:
+      "Welcome to our alumni website! It's a place where people who graduated from our school or program can connect and help each other out. We have two main goals helping current students find jobs and supporting our alumni even after they've already landed a job.",
+    deploy_link: "https://masai-alumni-temp.onrender.com/",
+    repo_link: "https://github.com/bhavnesh1811/masai-alumni-temp",
+    tech_stack: [
+      { name: "React", icon: <FaReact /> },
+      { name: "Redux", icon: <SiRedux /> },
+      { name: "Typescript", icon: <SiTypescript /> },
+      { name: "Chakra", icon: <SiChakraui /> },
+    ],
+  },
+  {
+    id: 2,
     project_name: "Advance Spare Care",
     image:
       "https://user-images.githubusercontent.com/108116297/221490829-713675c9-ce32-428b-b11d-2cbf7b95a8af.png",
     project_desc:
-      "Advance Spare Care is an scalable makeup auto parts website platform where the user can come and place their order. It is an Collaborative project of 5 members. It has a admin panel where admin can do a lot of options.",
+      "Advance Spare Care is an scalable makeup auto parts website platform where the user can come and place their order. It is an Collaborative project of 5 members.",
     deploy_link: "https://advance-auto-parts.vercel.app/",
     repo_link: "https://github.com/SORDE12/Advance-Spare-Care",
     tech_stack: [
@@ -43,14 +59,14 @@ const project = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     project_name: "Tata CliQ",
     image:
-      "https://camo.githubusercontent.com/e3daf89457e019865f84f065e1ef2c1c495aea4499113ba5bdbb0814fc45a0f5/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d317630426f2d3171327a4c564c4738704555484a654b4f69717450733036795f32",
+      "https://camo.githubusercontent.com/3bd4abf11a65b3b1bd878713ccb6bd11ad2c27233a64f02644a0e239350dccbb/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d317630426f2d3171327a4c564c4738704555484a654b4f69717450733036795f32",
     project_desc:
-      "Begin your journey online with one of the fastest growing, e-commerce brands in the country and have a seamless online shopping experience. Immerse yourself in the joy of browsing through the best Indian and international brands in fashion, luxury, electronics and jewellery.",
+      "Begin your journey online with one of the fastest growing, e-commerce brands in the country and have a seamless online shopping experience.",
     deploy_link: "https://tatacliq-two.vercel.app/",
-    repo_link: "https://github.com/dev-Imsaurabh/TATA-CLiQ-clone",
+    repo_link: "https://github.com/bhavnesh1811/TATA-CLiQ",
     tech_stack: [
       { name: "React", icon: <FaReact /> },
       { name: "Redux", icon: <SiRedux /> },
@@ -59,7 +75,7 @@ const project = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     project_name: "StreamSpot",
     image:
       "https://user-images.githubusercontent.com/110032728/221775546-8e275423-2c68-490c-b134-821623439733.png",
@@ -73,21 +89,21 @@ const project = [
       { name: "Chakra", icon: <SiChakraui /> },
     ],
   },
-  {
-    id: 4,
-    project_name: "Nykaa Clone",
-    image:
-      "https://user-images.githubusercontent.com/110032728/221774602-c312c8de-a642-4c62-86d4-430e3fe88dec.png",
-    project_desc:
-      "Nykaa.com is an ecommerce website inspired from original nykaa.com where users can shop different category of items. In this website, any user can login, signup, add products, filter products and purchase them by applying coupons.",
-    deploy_link: "https://sensational-torrone-ff2b20.netlify.app/",
-    repo_link: "https://github.com/bhavnesh1811/groovy-airplane-6414",
-    tech_stack: [
-      { name: "HTML", icon: <FaHtml5 /> },
-      { name: "CSS", icon: <FaCss3 /> },
-      { name: "JavaScript", icon: <FaJs /> },
-    ],
-  },
+  // {
+  //   id: 5,
+  //   project_name: "Nykaa Clone",
+  //   image:
+  //     "https://user-images.githubusercontent.com/110032728/221774602-c312c8de-a642-4c62-86d4-430e3fe88dec.png",
+  //   project_desc:
+  //     "Nykaa.com is an ecommerce website inspired from original nykaa.com where users can shop different category of items. In this website, any user can login, signup, add products, filter products and purchase them by applying coupons.",
+  //   deploy_link: "https://sensational-torrone-ff2b20.netlify.app/",
+  //   repo_link: "https://github.com/bhavnesh1811/groovy-airplane-6414",
+  //   tech_stack: [
+  //     { name: "HTML", icon: <FaHtml5 /> },
+  //     { name: "CSS", icon: <FaCss3 /> },
+  //     { name: "JavaScript", icon: <FaJs /> },
+  //   ],
+  // },
   // {
   //   id: 5,
   //   project_name: "Better Buy",
@@ -110,7 +126,7 @@ const Projects = () => {
         <Heading
           color={colorMode === "dark" ? YELLOWGREEN : LIGHTSTEELBLUE}
           textAlign={CENTER}
-          margin="40px auto"
+          margin={{base:"20px auto",md:"30px auto"}}
         >
           Projects
         </Heading>
@@ -133,28 +149,28 @@ const Projects = () => {
             direction={COLUMN}
             key={item.id}
             boxShadow={"rgba(0, 0, 0, 0.35) 0px 5px 15px"}
-            p={{ base: "10px", sm: "10px", lg: "15px" }}
+            p={{ base: "8px", md: "16px" }}
             borderRadius={"20px"}
             justifyContent={CENTER}
-            // 
-             m={AUTO}
+            //
+            m={AUTO}
             // gap={"20px"}
           >
             <Image
               src={item.image}
               alt={item.project_desc}
-              h={{ base: "150px", sm: "200px", md: "250px", lg: "200px" }}
+              h={{ base: "150px", sm: "200px", md: "300px"}}
             />
 
-            <Box
+            <Flex
               m={{
-                base: "5px auto",
+                base:"5px auto",
                 sm: "5px auto",
-                md: "5px auto",
+                md: "10px auto",
               }}
-              justifyContent={SE}
-              h={{ base: "330px", sm: "250px", md: "225px", lg: "250px" }}
-              // border="1px solid green"
+              gap="4px"
+              h={{ base: "full", sm: "250px", md: "225px"}}
+              direction={COLUMN}
             >
               <Heading
                 as={"h5"}
@@ -165,7 +181,7 @@ const Projects = () => {
               >
                 {item.project_name}
               </Heading>
-              <Text>{item.project_desc}</Text>
+              <Text minH="100px" overflow={"hidden"}>{item.project_desc}</Text>
 
               <Flex gap={4} justifyContent={SE}>
                 {item.tech_stack.map((item) => (
@@ -217,7 +233,7 @@ const Projects = () => {
                   </a>
                 </Button>
               </Flex>
-            </Box>
+            </Flex>
           </Flex>
         ))}
       </Grid>
