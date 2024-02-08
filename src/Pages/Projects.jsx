@@ -32,7 +32,7 @@ const project = [
     image:
       "https://github-production-user-asset-6210df.s3.amazonaws.com/110032728/303467603-6751368a-6b44-4dba-bf1d-9f158f95904d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240208%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240208T200409Z&X-Amz-Expires=300&X-Amz-Signature=a38294d473be1e1de5e808bdc5fef46c98fde64b0d7fb35322b7934533fb5859&X-Amz-SignedHeaders=host&actor_id=110032728&key_id=0&repo_id=754691430",
     project_desc:
-      "Welcome to our alumni website! It's a place where people who graduated from our school or program can connect and help each other out. We have two main goals helping current students find jobs and supporting our alumni even after they've already landed a job.",
+      "Welcome to our alumni website! It's a place where people who graduated from our school or program can connect and help each other out. We have two main goals helping current students find jobs and supporting our alumni even after they have already landed a job.",
     deploy_link: "https://masai-alumni-temp.onrender.com/",
     repo_link: "https://github.com/bhavnesh1811/masai-alumni-temp",
     tech_stack: [
