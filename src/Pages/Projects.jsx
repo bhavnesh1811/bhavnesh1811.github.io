@@ -30,7 +30,7 @@ const project = [
     id: 1,
     project_name: "Masai Alumni Website",
     image:
-      "https://github-production-user-asset-6210df.s3.amazonaws.com/110032728/303467603-6751368a-6b44-4dba-bf1d-9f158f95904d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240208%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240208T200409Z&X-Amz-Expires=300&X-Amz-Signature=a38294d473be1e1de5e808bdc5fef46c98fde64b0d7fb35322b7934533fb5859&X-Amz-SignedHeaders=host&actor_id=110032728&key_id=0&repo_id=754691430",
+      "https://res.cloudinary.com/ddkuxmjmv/image/upload/f_auto,q_auto/v1/portfolio-projects/phqtsz9vwl2ck1lfv70q",
     project_desc:
       "Welcome to our alumni website! It's a place where people who graduated from our school or program can connect and help each other out. We have two main goals helping current students find jobs and supporting our alumni even after they have already landed a job.",
     deploy_link: "https://masai-alumni-temp.onrender.com/",
@@ -46,7 +46,7 @@ const project = [
     id: 2,
     project_name: "Advance Spare Care",
     image:
-      "https://user-images.githubusercontent.com/108116297/221490829-713675c9-ce32-428b-b11d-2cbf7b95a8af.png",
+      "https://res.cloudinary.com/ddkuxmjmv/image/upload/f_auto,q_auto/v1/portfolio-projects/mqx8pyzzsdgsg3mqqk6o",
     project_desc:
       "Advance Spare Care is an scalable makeup auto parts website platform where the user can come and place their order. It is an Collaborative project of five members.",
     deploy_link: "https://advance-auto-parts.vercel.app/",
@@ -62,7 +62,7 @@ const project = [
     id: 3,
     project_name: "Tata CliQ",
     image:
-      "https://camo.githubusercontent.com/3bd4abf11a65b3b1bd878713ccb6bd11ad2c27233a64f02644a0e239350dccbb/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d317630426f2d3171327a4c564c4738704555484a654b4f69717450733036795f32",
+      "https://res.cloudinary.com/ddkuxmjmv/image/upload/f_auto,q_auto/v1/portfolio-projects/dbiauwbf1mbbnipsobzp",
     project_desc:
       "Begin your journey online with one of the fastest growing, e-commerce brands in the country and have a seamless online shopping experience.",
     deploy_link: "https://tatacliq-two.vercel.app/",
@@ -78,7 +78,7 @@ const project = [
     id: 4,
     project_name: "StreamSpot",
     image:
-      "https://user-images.githubusercontent.com/110032728/221775546-8e275423-2c68-490c-b134-821623439733.png",
+      "https://res.cloudinary.com/ddkuxmjmv/image/upload/f_auto,q_auto/v1/portfolio-projects/tx5d8hg0p7rzaf1ykp64",
     project_desc:
       "StreamSpot is an online video streaming website which allows users to stream movie trailers after their successful login and also allows users to know about any movie details using its search functionality.",
     deploy_link: "https://streamspot.netlify.app/",
