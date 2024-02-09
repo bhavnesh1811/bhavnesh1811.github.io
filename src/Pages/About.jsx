@@ -60,7 +60,9 @@ const About = () => {
           <Text>
             An enthusiastic Full Stack Web Developer with a strong set of
             technical as well as non-technical skills and a dedication towards
-            creating useful and interactive web applications.
+            creating useful and interactive web applications. As an SDE intern
+            for six months, I immersed myself in diverse software engineering
+            tasks.
           </Text>
 
           <Divider margin="20px auto" />

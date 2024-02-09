@@ -220,8 +220,9 @@ const Projects = () => {
                 marginTop={"20px"}
                 justifyContent={SE}
                 marginBottom={"20px"}
+                
               >
-                <Button>
+                <Button display={item.project_name==="Masai Alumni Website"?"none":"flex"}>
                   <a href={item.repo_link} target="_blank" rel="noreferrer">
                     Github
                   </a>
