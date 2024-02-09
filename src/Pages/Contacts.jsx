@@ -43,7 +43,7 @@ const Contact = () => {
 
     emailjs.sendForm('service_bif4535', 'template_hgai2a9', form.current, 'b1ElgQ56GqZGkFUyT')
       .then((result) => {
-        alert("Your Email has been sent,Thank You...")
+        alert("Your Email has been sent,Thank You.")
           console.log(result);
       }, (error) => {
           console.log(error.text);
