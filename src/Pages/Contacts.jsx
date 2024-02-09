@@ -12,6 +12,7 @@ import {
   Textarea,
   Heading,
   useColorMode,
+  useToast,
 } from "@chakra-ui/react";
 import React from "react";
 import { Grid, GridItem } from "@chakra-ui/react";
@@ -31,23 +32,44 @@ import {
   WHITESMOKE,
   YELLOWGREEN,
 } from "../constants/typography";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 
 const Contact = () => {
   const { colorMode } = useColorMode();
+  const toast = useToast();
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm('service_bif4535', 'template_hgai2a9', form.current, 'b1ElgQ56GqZGkFUyT')
+    emailjs
+      .sendForm(
+        "service_bif4535",
+        "template_hgai2a9",
+        form.current,
+        "b1ElgQ56GqZGkFUyT"
+      )
       .then((result) => {
-        alert("Your Email has been sent,Thank You.")
-          console.log(result);
-      }, (error) => {
-          console.log(error.text);
+        toast({
+          title: "Thank You..",
+          description: "Your Email has been sent.",
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+          position: "top-right",
+        });
+      })
+      .catch((error) => {
+        toast({
+          title: "There is some error",
+          description: "Your Email has been sent.",
+          status: "error",
+          duration: 3000,
+          isClosable: true,
+          position: "top-right",
+        });
       });
+      form.current.reset();
   };
   return (
     <Box id="contacts" textAlign={CENTER} pt={"90px"}>
@@ -59,7 +81,7 @@ const Contact = () => {
           Contact Me
         </Heading>
       </Box>
-      <Flex  direction={COLUMN}>
+      <Flex direction={COLUMN}>
         <Flex
           marginTop={30}
           marginBottom={"10px"}
@@ -67,10 +89,7 @@ const Contact = () => {
           color={colorMode === "dark" ? YELLOWGREEN : LIGHTSTEELBLUE}
           justify={CENTER}
         ></Flex>
-        <form ref={form}
-          onSubmit={sendEmail}
-          
-        >
+        <form ref={form} onSubmit={sendEmail}>
           <Box
             m={AUTO}
             w={["90%", "90%", "80%", "80%"]}
@@ -85,7 +104,7 @@ const Contact = () => {
               <VStack spacing={3}>
                 <FormControl id="name">
                   <FormLabel fontSize={FONTSIZE}>Your Name</FormLabel>
-                  <InputGroup borderColor="blue.500">
+                  <InputGroup borderColor="blue.500" >
                     <InputLeftElement
                       pointerEvents="none"
                       children={<BsPerson color="gray.800" />}
