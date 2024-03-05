@@ -33,7 +33,7 @@ const project = [
       "https://res.cloudinary.com/ddkuxmjmv/image/upload/f_auto,q_auto/v1/portfolio-projects/phqtsz9vwl2ck1lfv70q",
     project_desc:
       "Welcome to our alumni website! It's a place where people who graduated from our school or program can connect and help each other out. We have two main goals helping current students find jobs and supporting our alumni even after they have already landed a job.",
-    deploy_link: "https://alumni.masaischool.com",
+    deploy_link: "https://alumni.masaischool.com/",
     repo_link: "https://github.com/bhavnesh1811/masai-alumni-temp",
     tech_stack: [
       { name: "React", icon: <FaReact /> },
