@@ -28,7 +28,7 @@ import {
 const project = [
   {
     id: 1,
-    project_name: "Masai Alumni Website",
+    project_name: "Masai Alumni",
     image:
       "https://res.cloudinary.com/ddkuxmjmv/image/upload/f_auto,q_auto/v1/portfolio-projects/phqtsz9vwl2ck1lfv70q",
     project_desc:
