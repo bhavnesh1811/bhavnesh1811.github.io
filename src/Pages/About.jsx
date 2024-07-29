@@ -58,11 +58,11 @@ const About = () => {
           justifyContent={SE}
         >
           <Text>
-            An enthusiastic Full Stack Web Developer with a strong set of
-            technical as well as non-technical skills and a dedication towards
-            creating useful and interactive web applications. As an SDE intern
-            for six months, I immersed myself in diverse software engineering
-            tasks.
+            A motivated and skilled Software Development Engineer with more than 1 year of
+            working experience. Gained valuable skills as an SDE-1 at Vivahit.
+            Good at coding, solving problems and working well with teams to
+            create quality software. Strong analytical skills and eager to keep
+            learning and growing in the field.
           </Text>
 
           <Divider margin="20px auto" />

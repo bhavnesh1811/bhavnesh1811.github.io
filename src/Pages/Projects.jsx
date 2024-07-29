@@ -11,7 +11,7 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { FaReact, FaJs } from "react-icons/fa";
-import { SiChakraui, SiExpress, SiRedux, SiTypescript } from "react-icons/si";
+import { SiChakraui, SiExpress, SiRedux, SiTypescript,SiTailwindcss,SiNodedotjs } from "react-icons/si";
 import { v4 as uuidv4 } from "uuid";
 import {
   AUTO,
@@ -27,12 +27,28 @@ import {
 
 const project = [
   {
+    id: 0,
+    project_name: "VivaHit",
+    image:
+      "https://res.cloudinary.com/ddkuxmjmv/image/upload/v1722255573/vivahit_snap_xrzqmm.png",
+    project_desc:
+      "VivaHit is an innovative startup which is revolutionising Indian weddings with technology.VivaHit stands as a innovative player in the Indian wedding tech industry, streamlining guest management effectively.",
+    deploy_link: "https://vivahit.in/",
+    repo_link: "https://github.com/bhavnesh1811/masai-alumni-temp",
+    tech_stack: [
+      { name: "Next JS", icon: <FaReact /> },
+      { name: "Node.js", icon: <SiNodedotjs /> },
+      { name: "Typescript", icon: <SiTypescript /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+    ],
+  },
+  {
     id: 1,
     project_name: "Masai Alumni",
     image:
       "https://res.cloudinary.com/ddkuxmjmv/image/upload/f_auto,q_auto/v1/portfolio-projects/phqtsz9vwl2ck1lfv70q",
     project_desc:
-      "Welcome to our alumni website! It's a place where people who graduated from our school or program can connect and help each other out. We have two main goals helping current students find jobs and supporting our alumni even after they have already landed a job.",
+      "Welcome to alumni website! It's a place where people who graduated from our school or program can connect and help each other out. We have two main goals helping current students find jobs and supporting our alumni even after they have already landed a job.",
     deploy_link: "https://alumni.masaischool.com/",
     repo_link: "https://github.com/bhavnesh1811/masai-alumni-temp",
     tech_stack: [
@@ -126,7 +142,7 @@ const Projects = () => {
         <Heading
           color={colorMode === "dark" ? YELLOWGREEN : LIGHTSTEELBLUE}
           textAlign={CENTER}
-          margin={{base:"20px auto",md:"30px auto"}}
+          margin={{ base: "20px auto", md: "30px auto" }}
         >
           Projects
         </Heading>
@@ -159,17 +175,18 @@ const Projects = () => {
             <Image
               src={item.image}
               alt={item.project_desc}
-              h={{ base: "150px", sm: "200px", md: "300px"}}
+              h={{ base: "200px", sm: "200px", md: "300px" }}
+              rounded={"12px"}
             />
 
             <Flex
               m={{
-                base:"5px auto",
+                base: "5px auto",
                 sm: "5px auto",
                 md: "10px auto",
               }}
               gap="4px"
-              h={{ base: "full", sm: "250px", md: "225px"}}
+              h={{ base: "full", sm: "250px", md: "225px" }}
               direction={COLUMN}
             >
               <Heading
@@ -181,7 +198,9 @@ const Projects = () => {
               >
                 {item.project_name}
               </Heading>
-              <Text minH="100px" overflow={"hidden"}>{item.project_desc}</Text>
+              <Text minH="100px" overflow={"hidden"}>
+                {item.project_desc}
+              </Text>
 
               <Flex gap={4} justifyContent={SE}>
                 {item.tech_stack.map((item) => (
@@ -220,9 +239,15 @@ const Projects = () => {
                 marginTop={"20px"}
                 justifyContent={SE}
                 marginBottom={"20px"}
-                
               >
-                <Button display={item.project_name==="Masai Alumni"?"none":"flex"}>
+                <Button
+                  display={
+                    item.project_name === "Masai Alumni" ||
+                    item.project_name === "VivaHit"
+                      ? "none"
+                      : "flex"
+                  }
+                >
                   <a href={item.repo_link} target="_blank" rel="noreferrer">
                     Github
                   </a>
