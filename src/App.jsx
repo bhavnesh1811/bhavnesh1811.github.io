@@ -12,11 +12,10 @@ const App = () => {
   return (
     <div className="app">
       <Navbar />
-
       <Home />
       <About />
-      <Projects />
       <Skills />
+      <Projects />
       <Github />
       <Contacts />
     </div>
